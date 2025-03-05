@@ -8,7 +8,7 @@ import Footer from '../components/Footer'
 const Home = () => {
   return (
     <div>
-      <div className='flex-col md-flex justify-between gap-[30px] px-[5%] min-h-[calc(100vh)]'>
+      <div className='flex flex-col md:flex-row justify-between gap-[30px] px-[5%] min-h-[calc(100vh)]'>
         <div className='w-full md:w-[50%] flex flex-col justify-center items-center mb-[30px] md:mb-0'>
           <span className='text-[#00ff00] text-[44px] mb-[20px] font-semibold'>
             <ReactTyped
