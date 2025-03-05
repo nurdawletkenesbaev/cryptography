@@ -5,6 +5,7 @@ const First = () => {
   const [keyword, setKeyword] = useState('')
   const [text, setText] = useState('')
   const [str, setStr] = useState('')
+  const [remove, setRemove] = useState(0)
 
   function encryption(k, t) {
     setStr('')
@@ -12,18 +13,15 @@ const First = () => {
     const arrayKeyword = k.split('')
     const array = []
     array.push(arrayKeyword)
-
     const arrayText = arrayTextL.filter((item) => item !== ' ')
 
     for (let i = 0; i < arrayText.length; i++) {
       if (i % arrayKeyword.length === 0) {
         array.push([])
       }
-
       if (arrayText[i] !== ' ') {
         array[array.length - 1].push(arrayText[i])
       }
-
       if (i === arrayText.length - 1 && (i + 1) % arrayKeyword.length !== 0) {
         for (
           let j = i % arrayKeyword.length;
@@ -31,6 +29,7 @@ const First = () => {
           j++
         ) {
           array[array.length - 1].push('n')
+          setRemove((prev) => prev + 1)
         }
       }
     }
@@ -44,7 +43,6 @@ const First = () => {
     })
 
     newArray.sort()
-
     const result = []
     array.forEach((item, index) => {
       result[index] = []
@@ -52,7 +50,6 @@ const First = () => {
     newArray.forEach((item, index) => {
       item.map((element, ind) => (result[ind][index] = element))
     })
-
     result.map((item, index) => {
       if (index !== 0) {
         item.map((element) => {
@@ -60,15 +57,10 @@ const First = () => {
         })
       }
     })
-
-    // console.log(array)
-    // console.log(newArray)
-    // console.log(result)
-    console.log(str)
   }
   return (
     <div className='flex flex-col items-center'>
-      <div className='py-[20px] max-w-[500px] border-b-[1px] border-[#00ff00]'>
+      <div className='p-[20px] max-w-[500px] border-b-[1px] border-[#00ff00]'>
         <h1 className='text-[22px] text-[rgb(0,255,0)] mb-[20px] text-muted text-center'>
           Tekstti keste almastırıw usılı járdeminde shifrlań hám deshifrlań
         </h1>
@@ -110,11 +102,10 @@ const First = () => {
             </span>{' '}
             {str}
           </p>
-          {/* <p>text = {text}</p> */}
         </div>
       </div>
       <div className='max-w-[500px] w-full'>
-        <FirstDecryption />
+        <FirstDecryption remove={remove} />
       </div>
     </div>
   )

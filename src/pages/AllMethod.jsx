@@ -12,11 +12,6 @@ const AllMethod = () => {
       name: 'Cezar shifrlaw usılı',
       id: '2',
     },
-    {
-      path: '/first',
-      name: 'Keste almastırıw usılı',
-      id: '3',
-    },
   ]
   return (
     <div className='flex justify-center flex-col items-center py-[50px] border-t-[1px] border-b-[1px] border-[#00ff00]'>

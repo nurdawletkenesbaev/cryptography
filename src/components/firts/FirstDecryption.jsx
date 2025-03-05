@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const FirstDecryption = () => {
+const FirstDecryption = ({ remove }) => {
   const [keyword, setKeyword] = useState('')
   const [text, setText] = useState('')
   const [str, setStr] = useState('')
@@ -10,7 +10,6 @@ const FirstDecryption = () => {
     const arrayText = t.split('')
     const arrayKeyword = k.split('')
     const array = []
-
     arrayKeyword.sort()
     array.push(arrayKeyword)
 
@@ -18,11 +17,9 @@ const FirstDecryption = () => {
       if (i % arrayKeyword.length === 0) {
         array.push([])
       }
-
       if (arrayText[i] !== ' ') {
         array[array.length - 1].push(arrayText[i])
       }
-
       if (i === arrayText.length - 1 && (i + 1) % arrayKeyword.length !== 0) {
         for (
           let j = i % arrayKeyword.length;
@@ -65,15 +62,11 @@ const FirstDecryption = () => {
         })
       }
     })
-
-    console.log(array)
-    console.log(newArray)
-    console.log(result)
-    console.log(last)
+    setStr((prev) => prev.slice(0, remove))
   }
   return (
     <div>
-      <div className='py-[20px] border-b-[1px] border-[#00ff00]'>
+      <div className='p-[20px] border-b-[1px] border-[#00ff00]'>
         <h1 className='text-[26px] text-white mb-[20px] font-bold'>
           Deshifrlaw
         </h1>
@@ -111,7 +104,9 @@ const FirstDecryption = () => {
         </div>
         <div className='mt-[20px] text-white'>
           <p className='text-[20px] text-[#ff0000]'>
-            <span className='text-[18px] text-[#00ff00] bg-black opacity-90 p-[5px] rounded-sm'>Haqıyqıy tekst:</span>{' '}
+            <span className='text-[18px] text-[#00ff00] bg-black opacity-90 p-[5px] rounded-sm'>
+              Haqıyqıy tekst:
+            </span>{' '}
             {str}
           </p>
         </div>
