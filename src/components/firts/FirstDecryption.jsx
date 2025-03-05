@@ -62,7 +62,7 @@ const FirstDecryption = ({ remove }) => {
         })
       }
     })
-    setStr((prev) => prev.slice(0, remove))
+    // setStr((prev) => prev.slice(0, remove))
   }
   return (
     <div>
