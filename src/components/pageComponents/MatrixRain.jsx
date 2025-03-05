@@ -42,7 +42,7 @@ const MatrixRain = () => {
   return (
     <canvas
       ref={canvasRef}
-      className='absolute top-0 left-0 w-full h-full -z-[9] blur-[3px]'
+      className='absolute top-0 left-0 w-full h-full -z-[9] blur-[2px]'
     />
   )
 }

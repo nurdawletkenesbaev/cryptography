@@ -24,12 +24,7 @@ const Cezar = () => {
   return (
     <div className='relative flex justify-center'>
       <div>
-        <img
-          src={bg}
-          alt=''
-          className='absolute top-0 bottom-0 right-0 left-0 -z-10 blur-[7px] bg-black '
-        />
-        <div className='p-[20px] border-b-[1px] border-gray-400 max-w-[500px]'>
+        <div className='p-[20px] border-b-[1px] border-[#00ff00] max-w-[500px]'>
           <h1 className='text-[22px] text-[#00ff00] mb-[20px] text-muted text-center'>
             Tekstti Cezar shifrlaw algoritmi járdeminde shifrlań hám deshifrlań
           </h1>
@@ -65,7 +60,7 @@ const Cezar = () => {
           </div>
           <div className='mt-[20px] text-white '>
             <p className='text-[20px] text-[#ff0000]'>
-              <span className='text-[18px] text-[#00ff00]'>
+              <span className='text-[18px] text-[#00ff00] p-[5px] rounded-sm bg-black opacity-90'>
                 Shtrixlanǵan tekst:
               </span>{' '}
               {str}

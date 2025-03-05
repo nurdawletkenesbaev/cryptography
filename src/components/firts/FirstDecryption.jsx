@@ -111,7 +111,7 @@ const FirstDecryption = () => {
         </div>
         <div className='mt-[20px] text-white'>
           <p className='text-[20px] text-[#ff0000]'>
-            <span className='text-[18px] text-[#00ff00]'>Haqıyqıy tekst:</span>{' '}
+            <span className='text-[18px] text-[#00ff00] bg-black opacity-90 p-[5px] rounded-sm'>Haqıyqıy tekst:</span>{' '}
             {str}
           </p>
         </div>

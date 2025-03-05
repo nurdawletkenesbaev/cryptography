@@ -105,7 +105,7 @@ const First = () => {
         </div>
         <div className='mt-[20px] text-white'>
           <p className='text-[20px] text-[#ff0000]'>
-            <span className='text-[18px] text-[#00ff00]'>
+            <span className='text-[18px] text-[#00ff00] bg-black opacity-90 p-[5px] rounded-sm'>
               Shtrixlanǵan tekst:
             </span>{' '}
             {str}
