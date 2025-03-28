@@ -26,7 +26,7 @@ const Home = () => {
             formada kodlanadı.
           </p>
         </div>
-        <div className='w-full md:w-[50%] flex flex-col justify-center items-center'>
+        <div className='w-full md:w-[50%] mb-[30px] md:mb-0 flex flex-col justify-center items-center'>
           <img src={picture} alt='' />
         </div>
       </div>

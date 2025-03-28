@@ -12,6 +12,16 @@ const AllMethod = () => {
       name: 'Cezar shifrlaw usılı',
       id: '2',
     },
+    {
+      path: '/vijiner',
+      name: 'Vijiner shifrlaw usılı',
+      id: '3',
+    },
+    {
+      path: '/magic-square',
+      name: 'Sıyqırlı kvadrat usılı',
+      id: '4',
+    },
   ]
   return (
     <div className='flex justify-center flex-col items-center py-[50px] border-t-[1px] border-b-[1px] border-[#00ff00]'>
@@ -22,7 +32,7 @@ const AllMethod = () => {
         {methods.map((item, index) => (
           <Link
             key={item.id}
-            className='border-b-[1px] border-[#00ff00] py-[12px] px-[7px] text-center w-full text-[#00ff00] text-[22px] '
+            className='link w-full text-center border-0-important'
             to={item.path}
           >
             {item.name}

@@ -2,35 +2,35 @@
 ::-webkit-scrollbar {
   width: 0px;
 }
-button {
-    background: black;
-    color: #00ff00;
-    border: 2px solid #00ff00;
-    font-size: 20px;
-    padding: 10px 20px;
-    text-transform: uppercase;
-    position: relative;
-    overflow: hidden;
-    transition: 0.3s;
-  }
-  
-  button::before {
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    width: 110%;
-    height: 110%;
-    background: rgba(0, 255, 0, 0.2);
-    transform: translate(-100%, -100%);
-    transition: 0.3s;
-  }
-  
-  button:hover::before {
-    transform: translate(0, 0);
-  }
-  
-  button:hover {
-    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
-    box-shadow: 0 0 15px #00ff00;
-  }
+button, .link {
+  background: black;
+  color: #00ff00;
+  border: 1.8px solid #00ff00;
+  font-size: 16px;
+  padding: 7px 17px;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+button::before, .link::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 110%;
+  height: 110%;
+  background: rgba(0, 255, 0, 0.2);
+  transform: translate(-100%, -100%);
+  transition: 0.3s;
+}
+
+button:hover::before, .link:hover::before {
+  transform: translate(0, 0);
+}
+
+button:hover, .link:hover {
+  text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+  box-shadow: 0 0 15px #00ff00;
+}

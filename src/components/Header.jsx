@@ -4,7 +4,7 @@ import logo from '../images/logo.jpg'
 
 const Header = () => {
   return (
-    <div className='h-[60px] border-b-[1px] border-[#00ff00] flex items-center justify-between px-[5%] font-semibold bg-black opacity-60'>
+    <div className='h-[60px] border-b-[1px] border-[#00ff00] flex items-center justify-between px-[5%] font-semibold '>
       <Link to={'/'}>
         <img src={logo} alt='' className='w-[120px] h-[40px] object-contain' />
       </Link>
@@ -12,9 +12,9 @@ const Header = () => {
         <Link to={'/'} className='text-[#00ff00] font-semibold text-[20px]'>
           Home
         </Link>
-        <Link className='text-[#00ff00] font-semibold text-[20px]'>
+        {/* <Link className='text-[#00ff00] font-semibold text-[20px]'>
           Cryptography
-        </Link>
+        </Link> */}
       </div>
       <div></div>
     </div>
