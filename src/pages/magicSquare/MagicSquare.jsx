@@ -139,7 +139,6 @@ const MagicSquare = () => {
         .map((item, index) => {
           if (cryptionType === 1) return array[magic[index] - 1]
           else {
-            // array.reverse
             return array[magic.indexOf(index + 1)]
           }
         })
@@ -147,44 +146,6 @@ const MagicSquare = () => {
     )
   }
 
-  //korrekt 1-esap
-  // function esap(n) {
-  //   if (n === 0) {
-  //     return 0
-  //   } else if (n === 1) {
-  //     return 1
-  //   } else {
-  //     return ((2 + 50 / 51) * esap(n - 1) - esap(n - 2)) / (1 + 50 / 51)
-  //   }
-  // }
-  // for (let i = 2; i <= 50; i++) console.log(esap(i))
-
-  //korrekt 1-esap
-
-  // const [E, setE] = useState([])
-  // const E = []
-  // const E2 = []
-  // const n = 50,
-  //   U0 = 0,
-  //   U1 = 1,
-  //   b = 1
-  // for (let i = 0; i < 50; i++) {
-  //   E.push([])
-  //   for (let l = 0; l < 50; l++) {
-  //     if (i == l) E[i][l] = 1
-  //     else E[i][l] = 0
-  //   }
-  // }
-
-  // for (let i = 0; i < 50; i++) {
-  //   E2.push([])
-  //   for (let l = 0; l < 50; l++) {
-  //     if (i == l) E2[i][l] = 2
-  //     else E2[i][l] = 0
-  //   }
-  // }
-
-  // console.log(E)
 
   return (
     <div>
@@ -220,7 +181,6 @@ const MagicSquare = () => {
               <button
                 onClick={() => {
                   encryption(number, text, 1)
-                  // setCryption(1)
                 }}
                 className='text-white btn btn-success bg-[#00ff00] px-[12px] py-[7px] cursor-pointer rounded-md hover:scale-105 active:scale-95 duration-200'
               >
@@ -228,7 +188,6 @@ const MagicSquare = () => {
               </button>
               <button
                 onClick={() => {
-                  // setCryption(-1)
                   encryption(number, text, -1)
                 }}
                 className='text-white btn btn-success bg-[#00ff00] px-[12px] py-[7px] cursor-pointer rounded-md hover:scale-105 active:scale-95 duration-200'

@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { cezarEncrypt } from './cezarEncrypt'
-import { ReactTyped } from 'react-typed'
 
 const Cezar = () => {
   const [text, setText] = useState('')
@@ -16,45 +15,6 @@ const Cezar = () => {
     <div className='relative flex justify-center'>
       <div>
         <div className='p-[20px] border-b-[1px] border-[#00ff00] max-w-[500px]'>
-          {/* <span className='text-white'>
-            🔐{' '}
-            <strong className='text-[22px]'>
-              Cezar shifrlaw algoritmi ne?
-            </strong>
-            <br />
-            Cezar shifrlaw algoritmi - bul klassik simmetrik shifrlaw usılı
-            bolıp, tekstdegi hár bir háripti álipbedegi arnawlı bir poziciyaǵa
-            salıstırǵanda qózǵaw arqalı shifrlaydı.
-            <br />
-            Ol Rim imperatori <em>Gaius Julius Caesar</em> tárepinen
-            qollanılǵanı ushın sol at penen atalǵan.
-            <br />
-            <br />
-            🧠 <strong className='text-[22px]'>Islew Principi:</strong>
-            <br />
-            Hár bir hárip álippede belgilengen sandaǵı poziciyaǵa jıljıtıladı.
-            <br />
-            Bul san <em>gilt sanı</em> dep ataladı.
-            <br />
-            Biz qaraqalpaq tilindegi tekstlerdiń shifrlanıwın qaraymız.
-            <br />
-            <br />
-            <strong className='text-[22px]'>Mısalı:</strong>
-            <br />
-            Eger gilt sanı +3 bolsa :<br />
-            A → D<br />
-            B → F<br />
-            Ch → B (aylanba boyınsha qaytadı) <br /> <br />✅{' '}
-            <strong className='text-[22px]'>Abzallıqları:</strong>
-            <br />
-            Júdá ápiwayı hám tez isleydi <br />
-            Tekstti ózgertiw ushın giltti ózgertiw jetkilikli <br /> <br />❌{' '}
-            <strong className='text-[22px]'>Kemshilikleri:</strong>
-            <br />
-            Júdá ańsat buzıladı (brute-force menen 34 varianttı tekseriw
-            jetkilikli) <br />
-            Zamanagóy qáwipsizlik talaplarına juwap bermeydi <br />
-          </span> */}
           <h1 className='text-[22px] text-[#00ff00] my-[20px] text-muted text-center'>
             Tekstti Cezar shifrlaw algoritmi járdeminde shifrlań hám deshifrlań
           </h1>
