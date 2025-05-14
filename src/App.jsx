@@ -2,11 +2,12 @@ import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import MainLayout from './components/MainLayout'
 import First from './pages/First'
-import Cezar from './pages/Cezar'
 import './App.css'
-import Home from './pages/Home'
-import Vijiner from './pages/Vijiner'
-import MagicSquare from './pages/MagicSquare'
+import Home from './pages/home/Home'
+import Vijiner from './pages/vijiner/Vijiner'
+import MagicSquare from './pages/magicSquare/MagicSquare'
+import OnetimePad from './pages/OnetimePad'
+import Cezar from './pages/cezar/Cezar'
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
           <Route path='/cezar' element={<Cezar />} />
           <Route path='/vijiner' element={<Vijiner />} />
           <Route path='/magic-square' element={<MagicSquare />} />
+          <Route path='/one-time-pad' element={<OnetimePad />} />
         </Route>
       </Routes>
     </BrowserRouter>

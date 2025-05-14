@@ -1,9 +1,9 @@
 import React from 'react'
-import MatrixRain from '../components/pageComponents/MatrixRain'
+// import MatrixRain from '../../components/pageComponents/MatrixRain'
 import { ReactTyped } from 'react-typed'
-import picture from '../images/headerpic.png'
+import picture from '../../images/headerpic.png'
 import AllMethod from './AllMethod'
-import Footer from '../components/Footer'
+import Footer from '../../components/Footer'
 
 const Home = () => {
   return (

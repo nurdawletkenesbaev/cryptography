@@ -22,6 +22,11 @@ const AllMethod = () => {
       name: 'Sıyqırlı kvadrat usılı',
       id: '4',
     },
+    // {
+    //   path: '/one-time-pad',
+    //   name: 'Bir márteli blaknot usılı',
+    //   id: '5',
+    // },
   ]
   return (
     <div className='flex justify-center flex-col items-center py-[50px] border-t-[1px] border-b-[1px] border-[#00ff00]'>

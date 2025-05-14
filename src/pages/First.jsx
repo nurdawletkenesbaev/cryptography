@@ -7,6 +7,24 @@ const First = () => {
   const [str, setStr] = useState('')
   const [remove, setRemove] = useState(0)
 
+  // const parseText = (input) => {
+  //   const specials = ['sh', 'ch']
+  //   const result = []
+  //   let i = 0
+
+  //   while (i < input.length) {
+  //     const twoChar = input.slice(i, i + 2)
+  //     if (specials.includes(twoChar.toLowerCase())) {
+  //       result.push(twoChar)
+  //       i += 2
+  //     } else {
+  //       result.push(input[i])
+  //       i += 1
+  //     }
+  //   }
+  //   return result
+  // }
+
   function encryption(k, t) {
     setStr('')
     const arrayTextL = t.split('')
@@ -42,7 +60,10 @@ const First = () => {
       item.map((element, ind) => (newArray[ind][index] = element))
     })
 
+    console.log(newArray)
+
     newArray.sort()
+    // console.log(newArray.sort())
     const result = []
     array.forEach((item, index) => {
       result[index] = []
