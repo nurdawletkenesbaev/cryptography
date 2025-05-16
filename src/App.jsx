@@ -8,6 +8,7 @@ import Vijiner from './pages/vijiner/Vijiner'
 import MagicSquare from './pages/magicSquare/MagicSquare'
 import OnetimePad from './pages/OnetimePad'
 import Cezar from './pages/cezar/Cezar'
+import CezarAffin from './pages/cezarAffin/CezarAffin'
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <Route path='/vijiner' element={<Vijiner />} />
           <Route path='/magic-square' element={<MagicSquare />} />
           <Route path='/one-time-pad' element={<OnetimePad />} />
+          <Route path='/cezar-affin' element={<CezarAffin />} />
         </Route>
       </Routes>
     </BrowserRouter>
