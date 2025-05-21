@@ -27,6 +27,26 @@ const AllMethod = () => {
       name: 'Cezardıń affin usılı',
       id: '5',
     },
+    {
+      path: '/one-time-pad',
+      name: 'One time pad',
+      id: '6',
+    },
+    {
+      path: '/rabin',
+      name: 'Rabin',
+      id: '7',
+    },
+    {
+      path: '/rsa',
+      name: 'Rsa',
+      id: '8',
+    },
+    // {
+    //   path: '/ryukzak',
+    //   name: 'Ryukzak',
+    //   id: '9',
+    // },
   ]
   return (
     <div className='flex justify-center flex-col items-center py-[50px] border-t-[1px] border-b-[1px] border-[#00ff00]'>

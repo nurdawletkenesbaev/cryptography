@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { letters } from '../../constants/const'
 
-const Vijiner = () => {
+const OnetimePad = () => {
   const [key, setKey] = useState('')
   const [text, setText] = useState('')
   const [str, setStr] = useState('')
@@ -39,16 +39,6 @@ const Vijiner = () => {
     return isUpperCase ? letter.upperCase : letter.lowerCase
   }
 
-  const repeatKey = (keyArr, length) => {
-    const repeated = []
-    let i = 0
-    while (repeated.length < length) {
-      repeated.push(keyArr[i % keyArr.length])
-      i++
-    }
-    return repeated
-  }
-
   const correctCase = (char, isUpperCase) => {
     if (char === 'ı' && isUpperCase) return 'I'
     if (char === 'I' && !isUpperCase) return 'ı'
@@ -58,7 +48,7 @@ const Vijiner = () => {
   const vigenereEncrypt = (text, key) => {
     const parsedText = parseText(text)
     console.log(parsedText)
-    const parsedKey = repeatKey(parseText(key), parsedText.length)
+    const parsedKey = parseText(key)
     console.log(parsedKey)
     const totalLetters = letters.length
 
@@ -78,7 +68,7 @@ const Vijiner = () => {
 
   const vigenereDecrypt = (cipher, key) => {
     const parsedCipher = parseText(cipher)
-    const parsedKey = repeatKey(parseText(key), parsedCipher.length)
+    const parsedKey = parseText(key)
     const totalLetters = letters.length
 
     const decrypted = parsedCipher.map((char, i) => {
@@ -102,27 +92,24 @@ const Vijiner = () => {
         <div className='p-[20px]'>
           <div className='max-w-4xl mx-auto my-10 p-6 rounded-2xl shadow-lg border border-gray-700'>
             <h1 className='text-3xl font-bold text-center text-[#00ff00] mb-4'>
-              Vijiner shifrlaw algoritmi
+              Bir mártelik blaknot shifrlaw algoritmi (OneTimePad)
             </h1>
-            <p className='text-white text-lg mb-4'>
-              Vijiner shifrlaw algoritmi — bul{' '}
-              <span className='font-semibold'>
-                kópshilik tárepinen klassikalıq kriptografiyanıń eń kúshli
-                usıllarınan biri
-              </span>{' '}
-              dep esaplanadı. Bul algoritm{' '}
-              <span className='italic'>polialfavitikalıq almastırıw</span>{' '}
-              usılına tiykarlanadı, yaǵnıy birneshe túrli almastırıw giltleri
-              náwbet penen qollanıladı.
-            </p>
 
-            <h2 className='text-2xl font-semibold text-[#00ff00] mt-6 mb-2'>
-              Shifrlaw procesi:
-            </h2>
-            <p className='text-white'>
-              Hárbir háriptiń poziciyası gilt sózdegi sáykes hárip tiykarında
-              ózgertiledi. Hárbir háriptiń álipbedegi tártip nomeri tiykarında
-              kóshiriw arqalı jańa hárip payda etiledi.
+            <p className='text-white text-lg mb-4'>
+              Bir mártelik bloknot usılı Onetimepad dep te ataladı. Gilt
+              sipatında bolsa uzınlıǵı júdá úlken bolǵan belgiler izbe-izligi
+              alınadı.
+            </p>
+            <p className='text-white text-lg mb-4'>
+              Máselen, bir jazıwshınıń shıǵarmasın alıwımız múmkin. Mısal
+              retinde Pirimqul Qadirovtıń "Juldızlı túnler" shıǵarmasın alamız.
+              Bunda shifrlanıwshı tekst gilttegi sáykes belgiler menen qosıladı
+              hám modul alınadı. Modul alınıp atırǵan san tańlanıp atırǵan
+              alfavit uzınlıǵına teń bolıwı shárt. gilttiń paydalanılǵan bólegi
+              óshiriledi. Bul process shifrlanıp atırǵan tekst tamam bolǵansha
+              bolǵansha dawam ettiriledi. Bul Onetimepad usılı shifrdı ashıwdaǵı
+              qıyınshılıǵı menen (maǵlıwmatlardı qorǵaw baǵdarında) ádewir
+              bekkem shifrlaw usılı esaplanǵan
             </p>
 
             <h2 className='text-2xl font-semibold text-[#00ff00] mt-6 mb-2'>
@@ -175,9 +162,9 @@ const Vijiner = () => {
               Mısal:
             </h2>
             <p className='text-white text-lg'>
-              Ashıq tekst: <span className='font-mono'>kriptografiya</span>
+              Ashıq tekst: <span className='font-mono'>kriptograf</span>
               <br />
-              Gilt: <span className='font-mono'>qaraqalpaq</span>
+              Gilt tekst: <span className='font-mono'>qaraqalpaq</span>
               <br />
               Alfavitti indekslew: háripler 0 den 33 ke shekem cifrlanadı.
               Háripler sáykes túrde indeksler menen almastırıladı.
@@ -188,10 +175,9 @@ const Vijiner = () => {
                 1. Ashıq tekst hám giltlerdi indekslerge almastırıw:
               </h3>
               <p className='font-mono'>
-                kriptografiya = [13, 22, 10, 21, 24, 19, 6, 22, 0, 5, 10, 29, 0]{' '}
-                <br />
-                qaraqalpaq = [14, 0, 22, 0, 14, 0, 15, 21, 0, 14, 14, 0, 22]
-                (ashıq tekst uzınlıǵına teń bolǵanǵa shekem tákirarlap jazıladı)
+                kriptografiya = [13, 22, 10, 21, 24, 19, 6, 22, 0, 5] <br />
+                qaraqalpaq = [14, 0, 22, 0, 14, 0, 15, 21, 0, 14] (ashıq tekst
+                uzınlıǵına teń bolıwı shárt)
               </p>
             </div>
 
@@ -210,39 +196,15 @@ const Vijiner = () => {
                 (5 + 21) % 34 = 26 → Ú<br />
                 (22 + 21) % 34 = 9 → X<br />
                 (0 + 0) % 34 = 0 → A<br />
-                (5 + 14) % 34 = 19 → O<br />
-                (10 + 14) % 34 = 24 → T<br />
-                (29 + 0) % 34 = 29 → Y<br />
-                (0 + 22) % 34 = 22 → R
+                (5 + 14) % 34 = 19 → O
                 <br />
               </p>
             </div>
 
             <p className='text-white mt-4'>
               <strong>Shifrlanǵan tekst:</strong>{' '}
-              <span className='font-mono text-[#00ff00]'>VRCPDOÚXAOTYR</span>
+              <span className='font-mono text-[#00ff00]'>VRCPDOÚXAO</span>
             </p>
-
-            <h2 className='text-2xl font-semibold text-[#00ff00] mt-6 mb-2'>
-              Abzallıqları:
-            </h2>
-            <ul className='list-disc list-inside text-white space-y-1'>
-              <li>
-                Polialfavitli shifrlaw sebepli statistikalıq analizge
-                salıstırǵanda shıdamlı
-              </li>
-              <li>Gilt uzınıraq bolsa, qáwipsizlik dárejesi artadı</li>
-              <li>Ápiwayı matematikalıq ámeller tiykarında isleydi</li>
-            </ul>
-
-            <h2 className='text-2xl font-semibold text-[#00ff00] mt-6 mb-2'>
-              Kemshilikleri:
-            </h2>
-            <ul className='list-disc list-inside text-white space-y-1'>
-              <li>Gilt júdá qısqa bolsa, tez tabılıwı múmkin</li>
-              <li>Kalit joytılsa, deshifrlaw derlik múmkin emes</li>
-              <li>Háripler jaylasıwına baylanıslı bolıp qaladı</li>
-            </ul>
 
             <p className='mt-6 text-sm text-white text-center italic'>
               Bul maǵlıwmatlar Qaraqalpaq álipbesine (m = 34) maslastırılǵan.
@@ -252,7 +214,7 @@ const Vijiner = () => {
         </div>
         <div className='p-[20px] border-b-[1px] border-[#00ff00] max-w-[500px]'>
           <h1 className='text-[22px] text-[#00ff00] mb-[20px] text-muted text-center'>
-            Tekstti Vijiner shifrlaw algoritmi járdeminde shifrlań hám
+            Tekstti OneTimePad shifrlaw algoritmi járdeminde shifrlań hám
             deshifrlań
           </h1>
           <form className='flex flex-col gap-[20px]'>
@@ -305,4 +267,4 @@ const Vijiner = () => {
   )
 }
 
-export default Vijiner
+export default OnetimePad
