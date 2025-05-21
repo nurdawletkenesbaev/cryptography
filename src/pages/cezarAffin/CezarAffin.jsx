@@ -44,7 +44,6 @@ const CezarAffin = () => {
 
     return x1
   }
-  //   console.log(modInverse(22, 1517))
 
   function encryption(a, b, text) {
     const textArr = parseText(text)
@@ -64,7 +63,6 @@ const CezarAffin = () => {
     setEncrypted(result.join(''))
     return result.join('')
   }
-  //   console.log(encryption(3, 4, 'Nurdawlet'))
 
   function decryption(a, b, text) {
     const textArr = parseText(text)
